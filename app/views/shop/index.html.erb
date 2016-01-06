@@ -1,0 +1,31 @@
+<div class="shopWrapper">
+    <h1>미용실</h1>
+
+    <div class="shopWrapperPanel">
+        <div class="shopContentWrapper">
+            <div class="shopContentTitle">
+                이름
+            </div>
+            <div class="shopContentDate">
+                전화번호
+            </div>
+            <div class="shopContentReply">
+                주소
+            </div>
+        </div>
+        
+        <% @shop.each do |s|  %>
+        <div class="shopContentWrapper" onclick="viewBoard(<%=s.id%>)">
+            <div class="shopContentTitle">
+                <%= s.shop_nm %>
+            </div>
+            <div class="shopContentDate">
+                <%= s.shop_tel %>
+            </div>
+            <div class="shopContentReply">
+                <%= s.shop_adr %>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</div>
