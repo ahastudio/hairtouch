@@ -5,8 +5,7 @@ class ShopController < ApplicationController
     @shop = Shop.all
   end
 
-  def make
-  end
+  def make; end
 
   def show
     @shop = Shop.find(params[:id])

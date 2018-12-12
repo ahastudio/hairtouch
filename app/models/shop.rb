@@ -1,5 +1,5 @@
 class Shop < ApplicationRecord
-  has_many :designers
+  has_many :designers, dependent: :destroy
 
   validates :shop_nm, presence: true
   validates :shop_tel, presence: true
